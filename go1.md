@@ -3,8 +3,7 @@ go는 c언어와 비슷하게 컴파일러는 main함수와 main package를 먼�
 따라서 main package와 main 함수 없이는 컴파일 될 수 없음.      
        
 2. Println이 대문자로 시작하는 이유     
-다른 패키지로 함수를 export하기 위해서는 대문자로 시작해야함    
-소문자시작 함수는 private이므로 export불가능      
+다른 패키지로 함수를 export하기 위해서는 대문자로 시작해야함 소문자시작 함수는 private이므로 export불가능      
 
 3.상수선언       
 
@@ -32,7 +31,7 @@ name := "bbell"
 
 	func (para... string) string {}
 
-여러개의 인수들이 array로 저장됨.            
+여러개의 인수들이 array로 저장.            
 
 8. naked return            
 
@@ -54,11 +53,11 @@ func (para string) para11 {
 
 	index, value = range(array)
 	
-range는 for loop안에서만 사용할 수 있음.                
+range는 for loop안에서만 사용할 수 있다.                            
 
 11.  variable expression            
 if-else/switch를 시작하면서 변수를 선언가능.              
-이때 이 변수는 if-else문 안에서만 사용되는 지역변수임.                
+이때 이 변수는 if-else문 안에서만 사용되는 지역변수.                
 
 12. array 선언           
 
@@ -83,7 +82,7 @@ for loop의 range를 통해 순회가능.
 	key, value := range(map)   
 
 17. struct 정의             
-struct c언어의 구조체와 같음           
+struct c언어의 구조체와 같다           
 
 '''
 type structName struct{   
@@ -107,7 +106,7 @@ type structName struct{
 20. struct export          
 struct의 field들도 대문자로 작성해야 다른 파일에서 접근가능함.(public)         
 struct의 요소들은 private으로 설정하고 struct를 만들 수 있는 함수를 public으로 설정하는 방법을 주로 사용.           
-이때 함수는 포인터등의 object를 반환함.          
+이때 함수는 포인터등의 object를 반환.          
 
 21. 메소드 정의          
  
@@ -117,7 +116,7 @@ struct의 요소들은 private으로 설정하고 struct를 만들 수 있는 �
 
 	func (s *structName) methodName(para) {}
 
-기본적으로 메소드는 object를 복사하여 사용함.        
+기본적으로 메소드는 object를 복사하여 사용.        
 이때 object에 변경하고 싶은 것이 있을 때는 receiver 뒤 struct를 *struct로 고친다.            
 메모리를 직접 참조 가능.             
 
@@ -130,7 +129,7 @@ error의 값은 error나 nil(NULL) 두가지
 
 
 25. go의 error 처리             
-조건문으로 error를 직접 처리해주어야 함.           
+조건문으로 error를 직접 처리해야함.           
 
 '''
 if (error 값) != nil {
