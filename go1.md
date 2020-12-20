@@ -13,10 +13,10 @@ go는 c언어와 비슷하게 컴파일러는 main함수와 main package를 먼�
 
 4. 변수선언         
 
-'''
-var name string = "bbell"
-name := "bbell"
-'''
+```
+var name string = "bbell"            
+name := "bbell"             
+```
 
 단, 축약형은 함수내에서만 사용가능.         
 
@@ -35,12 +35,12 @@ name := "bbell"
 
 8. naked return            
 
-'''
+```
 func (para string) para11 {
 	para11 += para
 	return
 } 
-'''
+```
 
 함수 반환값에 반환될 변수를 선언가능.              
 마지막에 return만 써주면 알아서 찾아줌.           
@@ -84,19 +84,19 @@ for loop의 range를 통해 순회가능.
 17. struct 정의             
 struct c언어의 구조체와 같다           
 
-'''
+```
 type structName struct{   
 	value1 dataForm,   
 	value2 dataForm,   
 }
-'''  
+``` 
 
 18. struct 선언
 
-'''
+```
 변수이름 := structName{"bbell", "20"} 
 //structName{name: "bbell", old: "20"} 선언가능 이것을 권장.
-'''
+```
 
 19. 함수 export             
 함수를 export하기 위해서는         
@@ -131,11 +131,11 @@ error의 값은 error나 nil(NULL) 두가지
 25. go의 error 처리             
 조건문으로 error를 직접 처리해야함.           
 
-'''
+```
 if (error 값) != nil {
 log.Fatalln(error값) //Println호출하고 프로그램 종료 fmt.Println도 사용가능 단, 이경우 종료는 되지 않음.
 }
-'''
+```
 
 보통 위 조건문을 checkErr()함수로 만들어 사용함.           
 
@@ -159,7 +159,7 @@ String() 메소드는 python의 __str__과 역할이 같다.
 
 30. map에서 원하는 키값찾기 메소드            
 
-'''
+```
 func (d Ditionary) Search(wanted string) (string, error) {
 	value, found := d[wanted]
 	if found {
@@ -167,7 +167,7 @@ func (d Ditionary) Search(wanted string) (string, error) {
 	}
 	return "", errNoFound
 }
-'''
+```
 
 31. delete           
 
@@ -216,11 +216,11 @@ channel로 받아야 할 값이 많아질 때는 routine의 개수에 맞추어 
   
   42. strings.Join(strings.Fields(strings.TrimSpace(str)), " ")                   
   
-'''
+```
 	strings.TrimSpace(str string) //str의 여백 모두 제거한 str 반환
 	string.Fields(str string) //str을 문자간 긴 공백에 따라 배열로 저장
 	strings.Join(s []string, sep string) //sep을 사이에 두고 배열의 원소를 합춰준다.
-'''
+```
 
 43. append와 "..."                
 
